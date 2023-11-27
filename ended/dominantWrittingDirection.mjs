@@ -1,4 +1,4 @@
-import("./data_set/writingSystem");
+import SCRIPTS from "./data_set/writingSystem.mjs";
 
 // Return the script for a given code
 function characterScript(code) {

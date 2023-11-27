@@ -1875,19 +1875,4 @@ var SCRIPTS = [
   },
 ];
 
-//? This makes sure the data is exported in node.js —
-//! Here `require('./path/to/script.js')` will get you the data set.
-//  Usefull with require()
-if (
-  typeof module != "undefined" &&
-  module.exports &&
-  (typeof window == "undefined" || window.exports != exports)
-)
-  module.exports = SCRIPTS;
-
-//! Here `import "./path/to/script.js"` will get you the data set
-//! For use import you need to rename your `index.js` in module `index.mjs`
-// Usefull with import
-if (typeof global != "undefined" && !global.SCRIPTS) global.SCRIPTS = SCRIPTS;
-
-//? ====================================================
+export default SCRIPTS;
